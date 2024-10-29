@@ -1,0 +1,180 @@
+@model MuseoDescalzos.Models.Alquiler
+
+@{
+    ViewData["Title"] = "DetalleAlquiler";
+}
+<link rel="stylesheet" href="~/css/alquiler.css" asp-append-version="true" />
+
+        <div class="container mt-5 carta">
+          <div class="card">
+            <div class="row g-0">
+              <!-- Imagen -->
+              <div class="col-md-4 m-3">
+                @if (Model.Imagenes != null && Model.Imagenes.Any())
+                    {
+                        <img src="@Model.Imagenes.First().Rutalmagen" class="img-fluid rounded-start" alt="@Model.Titulo" style="width: 200px; height: 200px;">
+                    }
+
+              </div>
+              <!-- Contenido -->
+              <div class="col-md-4 m-3">
+                <div class="card-body">
+                  <!-- Título -->
+                  <h5 class="card-title">@Model.Titulo</h5>
+                  <!-- Descripción -->
+                  <p class="card-text">
+                    @Model.Descripcion
+                  </p>
+                  <!-- Fila para el botón y el icono -->
+                  <div class="d-flex align-items-center">
+                    <!-- Botón -->
+                    <a
+                      href="#"
+                      class="btn btn-contacto me-2"
+                      style="
+                        background-color: #2c2c2c;
+                        color: white;
+                        cursor: pointer;
+                      "
+                      >Contáctanos</a
+                    >
+                    <!-- Icono -->
+                    <span
+                      class="material-symbols-outlined"
+                      style="font-size: 24px; color: gray"
+                      >access_time</span
+                    >@Model.Hora_Disponible.ToString("hh\\:mm")
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="container my-5">
+          <div class="container-fluid">
+            <div
+              id="custom_carousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+              data-bs-interval="2500"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img
+                          src="http://placehold.it/350x250"
+                          class="img-responsive"
+                          alt="Slide 1"
+                        />
+                      </div>
+                      <div class="col-md-9">
+                        <h2>Características</h2>
+                        <p>
+                          @Model.Caracteristicas
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img
+                          src="http://placehold.it/350x250"
+                          class="img-responsive"
+                          alt="Slide 2"
+                        />
+                      </div>
+                      <div class="col-md-9">
+                        <h2>Características</h2>
+                        <p>
+                          @Model.Caracteristicas
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img
+                          src="http://placehold.it/350x250"
+                          class="img-responsive"
+                          alt="Slide 3"
+                        />
+                      </div>
+                      <div class="col-md-9">
+                        <h2>Características</h2>
+                        <p>
+                          @Model.Caracteristicas
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img
+                          src="http://placehold.it/350x250"
+                          class="img-responsive"
+                          alt="Slide 4"
+                        />
+                      </div>
+                      <div class="col-md-9">
+                        <h2>Características</h2>
+                        <p>
+                          @Model.Caracteristicas
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="controls">
+                <ul class="nav">
+                  <li
+                    data-bs-target="#custom_carousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                  >
+                    <a href="#"
+                      ><img src="http://placehold.it/50x50" /><small
+                        >Imagen Uno</small
+                      ></a
+                    >
+                  </li>
+                  <li data-bs-target="#custom_carousel" data-bs-slide-to="1">
+                    <a href="#"
+                      ><img src="http://placehold.it/50x50" /><small
+                        >Imagen Dos</small
+                      ></a
+                    >
+                  </li>
+                  <li data-bs-target="#custom_carousel" data-bs-slide-to="2">
+                    <a href="#"
+                      ><img src="http://placehold.it/50x50" /><small
+                        >Imagen Tres</small
+                      ></a
+                    >
+                  </li>
+                  <li data-bs-target="#custom_carousel" data-bs-slide-to="3">
+                    <a href="#"
+                      ><img src="http://placehold.it/50x50" /><small
+                        >Imagen Cuatro</small
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End Carousel -->
+          </div>
+@section scripts{
+    <script src="~/js/alquiler.js" asp-append-version="true"></script>
+}

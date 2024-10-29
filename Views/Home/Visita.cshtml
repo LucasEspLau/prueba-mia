@@ -1,0 +1,120 @@
+@{
+    ViewData["Title"] = "Visita";
+}
+<link rel="stylesheet" href="~/css/visita.css" asp-append-version="true" />
+<div>
+    <header class="position-relative">
+          <img src="~/img/museo2.jpg" alt="Museo" class="img-fluid w-100"  style="height: 300px; object-fit: cover;" />
+          <div
+            class="position-absolute top-50 start-50 translate-middle text-center text-white"
+          >
+            <div
+              class="header-content d-flex translate-middle text-center text-white"
+            >
+              <h1>PLANEA TU VISITA</h1>
+              <div class="circle"></div>
+            </div>
+          </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container justify-content-center">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">HORARIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">TARIFAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CÓMO LLEGAR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SERVICIOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PROTOCOLO</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <section class="bg text-center py-4 texto">
+          <div class="container">
+            <p class="lead">
+              Nuestro museo abre sus puertas de martes a domingo en dos turnos para brindarte una experiencia completa. 
+              Durante las mañanas, puedes visitarnos desde las 9:30 a.m. hasta la 1:00 p.m.. Luego, hacemos una pausa para almorzar y volvemos a abrir nuestras puertas en el turno de la tarde, desde las 2:00 p.m. hasta las 5:30 p.m..
+            </p>
+          </div>
+        </section>
+        <section class="py-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="~/img/museotres.jpg" alt="Museo" class="img-fluid w-100" />
+              </div>
+              <div class="col-lg-6 bg-dark text-white p-4">
+                <h4>¡ABRIMOS TODOS LOS DÍAS!</h4>
+                <p>
+                  Horario:<br> Martes a Domingo 9:30am- 13:00pm| 14:00 pm- 17:30pm<br> Lunes cerrado
+                </p>
+                <a href="@Url.Action("Index", "ReservarVisita")" class="btn btn-danger mb-3">COMPRAR ENTRADAS</a>
+                <p>
+                  <small
+                    >*Es importante para universitarios o estudiantes contar con
+                    un carnet</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <h6>TARIFAS:</h6>
+                <ul class="list-group">
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    Entrada Adultos
+                    <span class="bg">s/20.00</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    Entrada Estudiantes
+                    <span class="bg">s/10.00</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    Entrada Niños
+                    <span class="bg">Gratis</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <h5>SERVICIOS</h5>
+                <p>
+                  En el Museo de los Descalzos ofrecemos una experiencia 
+                  completa para nuestros visitantes. Contamos con guías expertos que te 
+                  acompañarán a lo largo de todo el recorrido, brindándote información 
+                  valiosa sobre cada sala y exposición. Además, estamos siempre disponibles 
+                  para responder cualquier pregunta que puedas tener. No olvides que puedes 
+                  tomarte fotos para capturar tu visita y llevarte recuerdos inolvidables de este 
+                  espacio lleno de historia y cultura.
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </section>
+
+</div>
+@section scripts{
+    <script>
+        $("#blogCarousel").carousel({
+            interval: 5000,
+        });
+    </script>
+}
